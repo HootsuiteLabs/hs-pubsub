@@ -14,9 +14,9 @@
   hsp.init({
   	subtitle: 'Build a Better Day!'
   });
-	hsp.bind('refresh', function() {
-	  alert('refreshing!');
-	});
+  hsp.bind('pubsub', function(event) {
+  	console.log(event);
+  });
   </script>
   <h2>Hackathon!!!</h2>
 </body>
