@@ -5,11 +5,11 @@ var hsps = {};
     // utility private methods go here (below)
     
     // public api methods go here (below)
-    this.subscribe = function () {
+    this.bind = function (name, callback) {
       // TODO
     };
 
-    this.publish = function () {
+    this.publish = function (event) {
       // TODO
     };
   };
