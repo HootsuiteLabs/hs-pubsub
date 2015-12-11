@@ -16,7 +16,7 @@
 			<h1>todos</h1>
 		</header>
 		<section class="main">
-			<ul class="todo-list">
+			<ul id="todos" class="todo-list">
 				<li id="1">
 					<div class="view">
 						<label>Attend Hackathon</label>
@@ -44,12 +44,8 @@
 	hsp.init({
 		subtitle: 'Build a Better Day!'
 	});
-	hsp.bind('refresh', function() {
-		hsp.publish({
-			appId: '5102',
-			event: 'HACK_PUSH',
-			data: 'hello world'
-		});
+	hsp.bind('pubsub', function(event) {
+		$("#todos").append('<li><div class="view"><label>Go watch ' + event.p1.data + '</label></div>');
 	});
   </script>
 </body>
