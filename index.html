@@ -10,14 +10,46 @@
 	<![endif]-->
 </head>
 <body>
+	<section class="todoapp">
+		<header class="header">
+			<h1>todos</h1>
+		</header>
+		<section class="main">
+			<ul class="todo-list">
+				<li id="1">
+					<div class="view">
+						<label>Attend Hackathon</label>
+					</div>
+				</li>
+				<li id="2">
+					<div class="view">
+						<label>Take dog out</label>
+					</div>
+				</li>
+				<li id="3">
+					<div class="view">
+						<label>Play video games</label>
+					</div>
+				</li>
+				<li id="4">
+					<div class="view">
+						<label>Buy milk</label>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</section>
   <script>
-  hsp.init({
-  	subtitle: 'Build a Better Day!'
-  });
-  hsp.bind('pubsub', function(event) {
-  	console.log(event.p1.data);
-  });
+  	hsp.init({
+  		subtitle: 'Build a Better Day!'
+  	});
+	hsp.bind('refresh', function() {
+		hsp.publish({
+			appId: '5102',
+			event: 'HACK_PUSH',
+			data: 'hello world'
+		});
+	});
   </script>
-  <h2>Hackathon!!!</h2>
 </body>
 </html>
