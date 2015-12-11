@@ -3,53 +3,11 @@
 <head>
 	<meta charset=utf-8 />
 	<title></title>
-	<link rel="stylesheet" type="text/css" media="screen" href="css/master.css" />
-	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-	<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-	<script src="lib/hsp_new.js"></script>
 	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 </head>
 <body>
-	<section class="todoapp">
-		<header class="header">
-			<h1>todos</h1>
-		</header>
-		<section class="main">
-			<ul id="todos" class="todo-list">
-				<li id="1">
-					<div class="view">
-						<label>Attend Hackathon</label>
-					</div>
-				</li>
-				<li id="2">
-					<div class="view">
-						<label>Take dog out</label>
-					</div>
-				</li>
-				<li id="3">
-					<div class="view">
-						<label>Play video games</label>
-					</div>
-				</li>
-				<li id="4">
-					<div class="view">
-						<label>Buy milk</label>
-					</div>
-				</li>
-			</ul>
-		</section>
-	</section>
-  <script>
-	hsp.init({
-		subtitle: 'Build a Better Day!'
-	});
-	hsp.bind('pubsub', function(event) {
-		var newId = event.p1.data.replace(/\s+/g, '');
-		$("#todos").prepend('<li id="' + newId + '" style="display: none;"><div class="view"><label>Go watch ' + event.p1.data + '</label></div></li>');
-		$("#" + newId).show("slide", { direction: "left" });
-	});
-  </script>
+	Hackathon!
 </body>
 </html>
