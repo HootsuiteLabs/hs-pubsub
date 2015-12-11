@@ -45,7 +45,7 @@
 		subtitle: 'Build a Better Day!'
 	});
 	hsp.bind('pubsub', function(event) {
-		$("#todos").prepend('<li style="display: none;"><div class="view"><label>Go watch ' + event.p1.data + '</label></div></li>').show("slide", { direction: "right" }, 1000);
+		$("#todos").prepend('<li><div class="view"><label>Go watch ' + event.p1.data + '</label></div></li>').show("slide", { direction: "right" }, 1000);
 	});
   </script>
 </body>
