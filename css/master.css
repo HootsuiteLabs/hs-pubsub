@@ -218,12 +218,22 @@ input[type="checkbox"] {
 	top: -155px;
 	width: 100%;
 	font-size: 100px;
-	font-weight: 100;
+	font-weight: 200;
 	text-align: center;
-	color: rgba(175, 47, 47, 0.15);
+	color: rgba(191, 63, 127, 0.6);
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
 	text-rendering: optimizeLegibility;
+}
+
+.receiver {
+  color: rgba(63, 63, 191, 0.6) !important;
+}
+
+.movie {
+  position: absolute;
+  padding-top: 15px;
+  padding-left: 10px;
 }
 
 .new-todo,
